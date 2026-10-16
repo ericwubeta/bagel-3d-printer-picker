@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#FAFAF7">
+  <meta name="description" content="选5个答案，跟贝果先找到1到2款值得比较的拓竹3D打印机，再按需看选机、耗材和排气笔记。">
+  <title>贝果，陪你选3D打印机</title>
+  <link rel="stylesheet" href="./style-v04.css">
+  <link rel="stylesheet" href="./pages.css">
+  <link rel="stylesheet" href="./portraits.css">
+</head>
+<body>
+  <main class="book">
+    <header class="masthead">
+      <button type="button" id="home-btn" class="brand" aria-label="贝果，陪你选3D打印机，返回首页">贝果陪你选</button>
+      <nav class="top-nav" aria-label="选机手册入口">
+        <button type="button" id="catalog-btn"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 22 7.5v9L12 22 2 16.5v-9Z M2 7.5l10 5.5 10-5.5 M12 13v9"/></svg><span>机型全图</span></button>
+        <button type="button" id="notes-btn"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h12a2 2 0 0 1 2 2v16H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z M7 8h8 M7 12h8 M7 16h5"/></svg><span>选机笔记</span></button>
+        <button type="button" id="new-btn"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 17c0-3-4-4.5-4-8a8 8 0 0 1 16 0c0 3.5-4 5-4 8Z M8 20h8 M10 23h4"/></svg><span>新品猜想</span></button>
+      </nav>
+    </header>
+    <section id="screen" tabindex="-1" aria-label="与贝果聊选机"></section>
+    <footer id="footer" class="page-footer"></footer>
+    <p id="announce" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></p>
+    <noscript>
+      <p class="boundary">这份小工具需要启用 JavaScript，才能逐轮回答问题并查看建议。</p>
+    </noscript>
+  </main>
+  <script src="./data.js"></script>
+  <script src="./engine.js"></script>
+  <script src="./questions.js"></script>
+  <script src="./note-content.js"></script>
+  <script src="./notes.js"></script>
+  <script src="./diagrams.js"></script>
+  <script src="./meow-data.js"></script>
+  <script src="./welcome.js"></script>
+  <script src="./prices.js"></script>
+  <script src="./pages.js"></script>
+  <script src="./assets-config.js"></script>
+  <script src="./app-v04.js"></script>
+</body>
+</html>

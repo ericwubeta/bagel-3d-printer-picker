@@ -1,0 +1,20 @@
+{
+  "name": "bagel-3d-printer-picker",
+  "version": "0.1.2",
+  "private": true,
+  "description": "贝果陪你选：五轮轻量问答，比较拓竹3D打印机的本地离线工具",
+  "license": "SEE LICENSE IN LICENSING.md",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "node scripts/build.cjs",
+    "build:brand": "node scripts/build.cjs --mode brand",
+    "start": "node scripts/serve.cjs",
+    "validate": "node scripts/validate.cjs",
+    "test": "node tests/engine.cjs && node tests/prices.cjs && node tests/license-content.cjs && node tests/welcome.cjs && node tests/build.cjs && node tests/server.cjs",
+    "package": "python scripts/package.py",
+    "licenses:update": "node scripts/update-license-notices.cjs",
+    "preflight": "node scripts/preflight.cjs"
+  }
+}

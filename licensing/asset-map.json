@@ -1,0 +1,226 @@
+{
+  "schemaVersion": 1,
+  "prepared_at": "2026-10-17",
+  "default_code_license": "MIT",
+  "default_excludes": [
+    "content/notes.json",
+    "web/assets/*.png",
+    "audio payload in web/meow-data.js",
+    "generated note-content.js"
+  ],
+  "attribution": {
+    "public_credit": "ericwubeta",
+    "xiaohongshu_profile_url": null,
+    "status": "github_maintainer_attribution",
+    "project_title": "贝果陪你选 · 3D打印机",
+    "source_url": "https://github.com/ericwubeta/bagel-3d-printer-picker"
+  },
+  "files": [
+    {
+      "path": "web/assets/a1-mini.svg",
+      "runtime_path": "assets/a1-mini.svg",
+      "license": "MIT",
+      "creator": "project-authored generic schematic",
+      "sha256": "b540f9c0a39f14813956361a48ff5a60a7507d7278bf49b2d930774e716051d2"
+    },
+    {
+      "path": "web/assets/a1.svg",
+      "runtime_path": "assets/a1.svg",
+      "license": "MIT",
+      "creator": "project-authored generic schematic",
+      "sha256": "1b54131edfcb0d2ea1381fdeee602a44fb4344715376ae91be7d3ad4fa41bb10"
+    },
+    {
+      "path": "web/assets/a2l.svg",
+      "runtime_path": "assets/a2l.svg",
+      "license": "MIT",
+      "creator": "project-authored generic schematic",
+      "sha256": "1ece06fd4a04653fda798011cd305f11b991b1dac09c8a6f1f7ce222d5b10d91"
+    },
+    {
+      "path": "web/assets/p1s.svg",
+      "runtime_path": "assets/p1s.svg",
+      "license": "MIT",
+      "creator": "project-authored generic schematic",
+      "sha256": "6f1b6a299f872389f8b377b8e782d33c14791b53231868c3f11fa4a274823d56"
+    },
+    {
+      "path": "web/assets/p2s.svg",
+      "runtime_path": "assets/p2s.svg",
+      "license": "MIT",
+      "creator": "project-authored generic schematic",
+      "sha256": "e8297e36b687d6ab5006f68bbf6de9b0849a7de1432c6b9f2b1dbd6dd6e2614f"
+    },
+    {
+      "path": "web/assets/x2d.svg",
+      "runtime_path": "assets/x2d.svg",
+      "license": "MIT",
+      "creator": "project-authored generic schematic",
+      "sha256": "251e4e6928313d8c32bc641c0aeaf1e15e18eae7932a7cad2f03f8b936a1f79a"
+    },
+    {
+      "path": "web/assets/h2s.svg",
+      "runtime_path": "assets/h2s.svg",
+      "license": "MIT",
+      "creator": "project-authored generic schematic",
+      "sha256": "3d64ed5fc6e825252cda2f5ea4c5abf6ffbcb7235baadd74c170b083eb3a88c7"
+    },
+    {
+      "path": "web/assets/h2d.svg",
+      "runtime_path": "assets/h2d.svg",
+      "license": "MIT",
+      "creator": "project-authored generic schematic",
+      "sha256": "48924a8501d9c4843ff9d012ea985e39d44dec6eb69663a88ca519dc9cebe21b"
+    },
+    {
+      "path": "web/assets/h2c.svg",
+      "runtime_path": "assets/h2c.svg",
+      "license": "MIT",
+      "creator": "project-authored generic schematic",
+      "sha256": "3c9000aa96cd11ce52297fe3a63c5d989b11d3316587db7dc61b2ad479d4b1b1"
+    },
+    {
+      "path": "web/assets/bagel-extra-poses.png",
+      "runtime_path": "assets/bagel-extra-poses.png",
+      "license": "CC-BY-NC-4.0",
+      "creator": "ericwubeta",
+      "sha256": "ea68184604abff1df14e7fbbf6df340ff2be168e3e6942b71297d2dc1b6ba05d",
+      "source": "Project AI-assisted artwork based on owner-supplied Bagel references; original references are excluded.",
+      "modifications": "Existing approved raster retained; CSS cropping/occlusion or animation composition as documented.",
+      "third_party_exception": null
+    },
+    {
+      "path": "web/assets/bagel-poses-soft-v02.png",
+      "runtime_path": "assets/bagel-poses-soft-v02.png",
+      "license": "CC-BY-NC-4.0",
+      "creator": "ericwubeta",
+      "sha256": "9638ec407854b3665deec09d414508a55d12cacbc74e91f72173ec6195bc4ac2",
+      "source": "Project AI-assisted artwork based on owner-supplied Bagel references; original references are excluded.",
+      "modifications": "Existing approved raster retained; CSS cropping/occlusion or animation composition as documented.",
+      "third_party_exception": null
+    },
+    {
+      "path": "web/assets/welcome-pose-0.png",
+      "runtime_path": "assets/welcome-pose-0.png",
+      "license": "CC-BY-NC-4.0",
+      "creator": "ericwubeta",
+      "sha256": "922174de09548296855c8a2d67b9e432e0453cd6b57daadc9e908a8d26f8d18a",
+      "source": "Project AI-assisted artwork based on owner-supplied Bagel references; original references are excluded.",
+      "modifications": "Existing approved raster retained; CSS cropping/occlusion or animation composition as documented.",
+      "third_party_exception": null
+    },
+    {
+      "path": "web/assets/welcome-pose-1.png",
+      "runtime_path": "assets/welcome-pose-1.png",
+      "license": "CC-BY-NC-4.0",
+      "creator": "ericwubeta",
+      "sha256": "d75ff7f51813144875e67c50f53dbcc330da416c6b35935cbd90a7584b3c494d",
+      "source": "Project AI-assisted artwork based on owner-supplied Bagel references; original references are excluded.",
+      "modifications": "Existing approved raster retained; CSS cropping/occlusion or animation composition as documented.",
+      "third_party_exception": null
+    },
+    {
+      "path": "web/assets/welcome-pose-2.png",
+      "runtime_path": "assets/welcome-pose-2.png",
+      "license": "CC-BY-NC-4.0",
+      "creator": "ericwubeta",
+      "sha256": "fabadebe5abf45bb4b1e98d94dabbf8059b3a46b9ad2e592d1a0bc8e6a8d106b",
+      "source": "Project AI-assisted artwork based on owner-supplied Bagel references; original references are excluded.",
+      "modifications": "Existing approved raster retained; CSS cropping/occlusion or animation composition as documented.",
+      "third_party_exception": null
+    },
+    {
+      "path": "web/assets/welcome-pose-3.png",
+      "runtime_path": "assets/welcome-pose-3.png",
+      "license": "CC-BY-NC-4.0",
+      "creator": "ericwubeta",
+      "sha256": "ec8ee792ea44485eeb9131b993619bfd8307166f404baa6cf0e06b0c44c36eb6",
+      "source": "Project AI-assisted artwork based on owner-supplied Bagel references; original references are excluded.",
+      "modifications": "Existing approved raster retained; CSS cropping/occlusion or animation composition as documented.",
+      "third_party_exception": null
+    },
+    {
+      "path": "web/assets/welcome-pose-4.png",
+      "runtime_path": "assets/welcome-pose-4.png",
+      "license": "CC-BY-NC-4.0",
+      "creator": "ericwubeta",
+      "sha256": "d83bb4ed6e21aff8f5534a2e7122082b7429f9ea84af89d56bb1ea9e9658ec39",
+      "source": "Project AI-assisted artwork based on owner-supplied Bagel references; original references are excluded.",
+      "modifications": "Existing approved raster retained; CSS cropping/occlusion or animation composition as documented.",
+      "third_party_exception": null
+    },
+    {
+      "path": "web/assets/welcome-pose-5.png",
+      "runtime_path": "assets/welcome-pose-5.png",
+      "license": "CC-BY-NC-4.0",
+      "creator": "ericwubeta",
+      "sha256": "3ea8efc4f94a549372aca67dd044080e06f394a3e386c57ef6d219bf9693286c",
+      "source": "Project AI-assisted artwork based on owner-supplied Bagel references; original references are excluded.",
+      "modifications": "Existing approved raster retained; CSS cropping/occlusion or animation composition as documented.",
+      "third_party_exception": null
+    },
+    {
+      "path": "web/assets/welcome-pose-6.png",
+      "runtime_path": "assets/welcome-pose-6.png",
+      "license": "CC-BY-NC-4.0",
+      "creator": "ericwubeta",
+      "sha256": "d6c13f24cd3259ce4f804da05a6de9981afa4aa76ca35b8a3492ccff8d2b922f",
+      "source": "Project AI-assisted artwork based on owner-supplied Bagel references; original references are excluded.",
+      "modifications": "Existing approved raster retained; CSS cropping/occlusion or animation composition as documented.",
+      "third_party_exception": null
+    },
+    {
+      "path": "web/assets/welcome-pose-7.png",
+      "runtime_path": "assets/welcome-pose-7.png",
+      "license": "CC-BY-NC-4.0",
+      "creator": "ericwubeta",
+      "sha256": "90db7d34bc00f7675af793f98e652e926970e164e3b65af5c9e251ea84c140a9",
+      "source": "Project AI-assisted artwork based on owner-supplied Bagel references; original references are excluded.",
+      "modifications": "Existing approved raster retained; CSS cropping/occlusion or animation composition as documented.",
+      "third_party_exception": null
+    },
+    {
+      "path": "content/notes.json",
+      "runtime_path": "note-content.js",
+      "license": "CC-BY-NC-4.0",
+      "creator": "ericwubeta",
+      "sha256": "f9de5212dc5c082e0f5979812d3ddf24bf25fa3ead4f8d42e9c451bb8d309b37",
+      "source": "Project-authored excerpts of the Bagel account notes; third-party originals and friend source works are excluded.",
+      "modifications": "Data separated from the MIT API wrapper without changing text."
+    },
+    {
+      "path": "web/meow-data.js",
+      "components": [
+        {
+          "scope": "JavaScript wrapper",
+          "license": "MIT"
+        },
+        {
+          "scope": "Base64 PCM audio",
+          "license": "CC0-1.0",
+          "creator": "tuberatanka",
+          "source_url": "https://freesound.org/people/tuberatanka/sounds/110011/",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "pcm_sha256": "dd4041732e946010d20a401742edf4ac2150b79baffdbfa346318c001effdd5a",
+          "modifications": "Full clip decoded to mono 22050Hz 16-bit PCM, no trim/speed/pitch change; runtime gain 0.85. Not a recording of Bagel."
+        }
+      ]
+    }
+  ],
+  "not_present": [
+    "standalone Logo"
+  ],
+  "excluded_from_public_source": [
+    "private-assets/",
+    "vendor product photos",
+    "owner original photos",
+    "friend reference works",
+    "raw research and interview files",
+    "font binaries"
+  ],
+  "license_texts": {
+    "MIT": "LICENSE",
+    "CC-BY-NC-4.0": "LICENSES/CC-BY-NC-4.0.txt"
+  },
+  "trademark_note": "Copyright permissions do not grant trademark, patent, publicity/privacy rights or endorsement."
+}

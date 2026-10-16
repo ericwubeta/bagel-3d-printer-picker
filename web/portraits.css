@@ -1,0 +1,28 @@
+/* User-approved V03 sheet, displayed at its original proportions.
+   Source boxes: seated (228,10,570,860), peek (1033,104,616,720).
+   CSS displays/crops the intact PNG; no shape editing or stretching. */
+.portrait.extra-read{height:calc(var(--cat-width)*1.50877193);pointer-events:none}
+.portrait.extra-read img{position:absolute;max-width:none;height:auto;width:311.22807018%;left:-40%;top:-1.1627907%}
+.portrait.extra-read.reading-cat{--cat-width:125px;margin-left:12px}
+.portrait.extra-read.note-companion{--cat-width:95px;margin-left:12px}
+.portrait.extra-peek{height:calc(var(--cat-width)*1.16883117);pointer-events:none}
+.extra-peek .peek-body-window{display:block;position:absolute;top:0;left:0;width:100%;height:100%;overflow:hidden}
+.portrait.extra-peek .pose-body{position:absolute;max-width:none;height:auto;width:287.98701299%;left:-167.69480519%;top:-14.44444444%;z-index:0}
+.extra-peek .peek-paw{display:block;position:absolute;top:83.05555556%;height:16.94444444%;overflow:hidden;z-index:3;pointer-events:none}
+.extra-peek .peek-paw-left{left:24.02597403%;width:24.35064935%}
+.extra-peek .peek-paw-right{left:54.22077922%;width:28.24675325%}
+.portrait.extra-peek .peek-paw img{position:absolute;max-width:none;height:auto;width:calc(var(--cat-width)*2.87987013);top:calc(var(--cat-width)*-1.13961039)}
+.portrait.extra-peek .peek-paw-left img{left:calc(var(--cat-width)*-1.91720779)}
+.portrait.extra-peek .peek-paw-right img{left:calc(var(--cat-width)*-2.21915584)}
+/* Body behind the actual heading card, only the two paws in front. */
+.pages-header-peek{position:relative;display:block;padding-top:116px;margin-top:0;margin-bottom:22px;isolation:isolate}
+.pages-header-peek .portrait.extra-peek{--cat-width:112px;position:absolute;right:16px;top:0;width:112px;overflow:visible}
+.pages-header-peek .pages-heading{position:relative;z-index:2;padding:24px 18px 18px;background:#E9EFF4;border:1px solid #BBC8D0;border-radius:5px}
+.pages-header-peek .pages-heading h1{font-size:29px}
+.pages-header-peek .pages-heading p{margin-top:8px}
+@media(max-width:350px){
+ .portrait.extra-read.reading-cat{--cat-width:102px;margin-left:9px}
+ .pages-header-peek{padding-top:104px}
+ .pages-header-peek .portrait.extra-peek{--cat-width:100px;width:100px;right:13px}
+ .pages-header-peek .pages-heading{padding-top:23px}
+}

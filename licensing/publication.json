@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "prepared_at": "2026-10-17",
+  "publication_status": "authorized_public_source",
+  "proposed_repository": "ericwubeta/bagel-3d-printer-picker",
+  "repository_url": "https://github.com/ericwubeta/bagel-3d-printer-picker",
+  "public_credit": "ericwubeta",
+  "xiaohongshu_profile_url": null,
+  "public_push_approved": true,
+  "content_license": "CC-BY-NC-4.0",
+  "code_license": "MIT",
+  "font_output_review": {
+    "status": "excluded_from_public_source",
+    "files": [
+      "web/assets/welcome-hello.png",
+      "web/assets/welcome-invite.png"
+    ],
+    "evidence": "docs/asset-provenance.md#welcome-lettering",
+    "resolution": "Two unresolved caption rasters retained privately and excluded from Git/public builds; welcome.js renders the same phrases with device-native generic fonts. Original font provenance remains unverified."
+  },
+  "pending_fields_note": "小红书主页链接可后补，当前以GitHub维护者账号与仓库来源署名；不补造链接。",
+  "approval_evidence": {
+    "date": "2026-10-17",
+    "instruction": "推送到github",
+    "scope": "Public source repository only; no platform deployment or private asset publication."
+  },
+  "attribution_basis": "Verified authenticated GitHub account ericwubeta (user id 273024733); no inferred social profile URL."
+}

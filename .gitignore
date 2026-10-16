@@ -1,0 +1,50 @@
+# Local candidate only; excludes private inputs and generated artifacts.
+node_modules/
+dist/
+output/
+reports/
+private-assets/
+coverage/
+.cache/
+.tmp/
+tmp/
+temp/
+
+# Environment and local account material.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*.json
+*token*.local*
+*.local
+*.log
+logs/
+
+# Raw research pages, local recordings and historical folders stay outside.
+research/
+sources/
+raw-research/
+raw-html/
+raw-pages/
+snapshots/
+before/
+backups/
+*.har
+*.mhtml
+*.webarchive
+*.zip
+*.7z
+*.rar
+
+# Operating-system and editor state.
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+__pycache__/
+*.pyc
