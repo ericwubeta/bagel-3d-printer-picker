@@ -14,7 +14,7 @@ const attribution = {public_credit: publication.public_credit, xiaohongshu_profi
 const models = ['a1-mini','a1','a2l','p1s','p2s','x2d','h2s','h2d','h2c'];
 const pngs = ['bagel-extra-poses.png','bagel-poses-soft-v02.png'].concat(Array.from({length:8},(_,i)=>'welcome-pose-'+i+'.png'));
 const productImages = JSON.parse(read('licensing/product-images.json'));
-const productNotice = read('LICENSES/Bambu-Product-Images.txt');
+const productNotice = read('LICENSES/Bambu-Product-Images.txt').replace(/\r\n/g,'\n');
 const materials = models.map(id => ({path:'web/assets/'+id+'.svg',source_only:true,license:'MIT',creator:'project-authored generic schematic; retained as an unused source reference',sha256:sha('web/assets/'+id+'.svg')}));
 for(const id of models){
   const source=productImages.files.find(item=>item.model_id===id);

@@ -20,7 +20,7 @@ if(map.files.filter(m=>m.license==='CC-BY-NC-4.0').length!==11) errors.push('Exp
 if(map.files.filter(m=>m.license==='MIT').length!==9) errors.push('Expected 9 generic SVGs');
 if(map.files.filter(m=>m.license==='LicenseRef-Bambu-Product-Images').length!==9)errors.push('Expected 9 separately attributed official product images');
 if(!meta.official_image_sync || !meta.official_image_sync.public_source_inclusion_requested)errors.push('Official image inclusion must follow the owner request');
-if(!notice.licenses['LicenseRef-Bambu-Product-Images'] || notice.licenses['LicenseRef-Bambu-Product-Images'].text!==fs.readFileSync(path.join(root,'LICENSES/Bambu-Product-Images.txt'),'utf8'))errors.push('Third-party product-image notice missing or stale');
+if(!notice.licenses['LicenseRef-Bambu-Product-Images'] || notice.licenses['LicenseRef-Bambu-Product-Images'].text!==fs.readFileSync(path.join(root,'LICENSES/Bambu-Product-Images.txt'),'utf8').replace(/\r\n/g,'\n'))errors.push('Third-party product-image notice missing or stale');
 for(const name of fs.readdirSync(path.join(root,'web/assets'))){
   const source='web/assets/'+name;
   if(!map.files.some(m=>m.path===source))errors.push('Asset lacks per-file license coverage: '+source);
