@@ -83,7 +83,7 @@ try {
   for (const model of dataContext.BagelData.models) {
     const file = model.image.slice(2);
     const matches = attribution.materials.filter(material => (material.runtime_path || material.path) === file);
-    const expectedLicense = mode === 'brand' ? 'NO-PUBLIC-REDISTRIBUTION-GRANT' : 'MIT';
+    const expectedLicense = dataContext.BagelData.assetProfile === 'private-vendor-images' ? 'NO-PUBLIC-REDISTRIBUTION-GRANT' : 'LicenseRef-Bambu-Product-Images';
     if (matches.length !== 1 || matches[0].license !== expectedLicense) errors.push('Incorrect machine-image attribution: ' + model.id);
   }
 } catch (error) {errors.push('Runtime attribution validation failed: ' + error.message);}

@@ -23,6 +23,15 @@ try {
   assert.ok(fs.existsSync(path.join(temporary, 'dist/public/note-content.js')));
   assert.ok(!fs.existsSync(path.join(temporary, 'dist/public/content/notes.json')));
   passed++;
+  // Both distributed profiles use the checked-in official images without private workspace inputs.
+  result = run('build.cjs', ['--mode', 'brand']); assert.strictEqual(result.status, 0, result.stderr);
+  const defaultBrand = JSON.parse(fs.readFileSync(path.join(temporary, 'dist/brand/licensing/runtime-attribution.json'), 'utf8'));
+  for(const model of require('../web/data.js').models){
+    const file='assets/'+model.id+'.png';
+    assert.deepStrictEqual(fs.readFileSync(path.join(temporary,'dist/public',file)),fs.readFileSync(path.join(temporary,'dist/brand',file)));
+    assert.strictEqual(defaultBrand.materials.find(m=>m.path===file).license,'LicenseRef-Bambu-Product-Images');
+  }
+  passed++;
   // Reproducible fresh clone: no original workspace, private assets, npm install or research neighbors.
   const first = fs.readFileSync(path.join(temporary, 'output/manifest-public.json'), 'utf8');
   result = run('build.cjs', ['--mode', 'public']); assert.strictEqual(result.status, 0, result.stderr);
@@ -34,8 +43,11 @@ try {
   assert.ok(!fs.existsSync(path.join(temporary, 'dist/public/stale-secret.txt')));
   passed++;
   const before = fs.readFileSync(path.join(temporary, 'dist/public/index.html'), 'utf8');
+  const missingImage=path.join(temporary,'web/assets/a1.png');
+  fs.renameSync(missingImage,missingImage+'.backup');
   result = run('build.cjs', ['--mode', 'brand']); assert.notStrictEqual(result.status, 0);
   assert.strictEqual(fs.readFileSync(path.join(temporary, 'dist/public/index.html'), 'utf8'), before);
+  fs.renameSync(missingImage+'.backup',missingImage);
   passed++;
   // Exercise explicit local asset injection using synthetic fixture images, not vendor media.
   fs.mkdirSync(path.join(temporary, 'local-asset-fixtures'));
@@ -64,9 +76,9 @@ try {
     assert.strictEqual(noticeEntry.sha256, crypto.createHash('sha256').update(fs.readFileSync(path.join(profileRoot, noticeEntry.file))).digest('hex'));
   }
   for (const model of require('../web/data.js').models) {
-    const schematic = notices.public.materials.filter(item => item.path === 'assets/' + model.id + '.svg');
+    const official = notices.public.materials.filter(item => item.path === 'assets/' + model.id + '.png');
     const vendor = notices.brand.materials.filter(item => item.path === 'assets/' + model.id + '.png');
-    assert.strictEqual(schematic.length, 1); assert.strictEqual(schematic[0].license, 'MIT');
+    assert.strictEqual(official.length, 1); assert.strictEqual(official[0].license, 'LicenseRef-Bambu-Product-Images');
     assert.strictEqual(vendor.length, 1); assert.strictEqual(vendor[0].license, 'NO-PUBLIC-REDISTRIBUTION-GRANT');
     assert.strictEqual(vendor[0].source_sha256, vendor[0].sha256);
     assert.ok(!notices.brand.materials.some(item => item.path === 'assets/' + model.id + '.svg'));
@@ -110,7 +122,7 @@ try {
   fs.renameSync(notePath + '.backup', notePath);
   assert.deepStrictEqual(fs.readFileSync(notePath), noteBytes);
   passed++;
-  console.log(JSON.stringify({suite: 'standalone-build', passed, total: 10, fixtureOnly: true}));
+  console.log(JSON.stringify({suite: 'standalone-build', passed, total: 11, localOverrideUsesSyntheticFixtures: true}));
 } finally {
   const resolved = fs.realpathSync(temporary);
   const allowedParent = fs.realpathSync(os.tmpdir()) + path.sep;

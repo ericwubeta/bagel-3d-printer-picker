@@ -34,5 +34,11 @@
     "date": "2026-10-19",
     "instruction": "把小工具和Skill单独设置仓库",
     "scope": "Update the existing app repository and create/push a separate public skill repository; prepare local Xiaohongshu upload ZIP only."
+  },
+  "official_image_sync": {
+    "date": "2026-10-19",
+    "public_source_inclusion_requested": true,
+    "instruction": "仓库中的也换成我们的；不是实拍图，是我们之前从拓竹官网拿到的图片",
+    "scope": "Nine previously used Bambu product images, with separate third-party rights notices. No claim of vendor permission or relicensing."
   }
 }

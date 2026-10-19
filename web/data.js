@@ -1,4 +1,4 @@
-/* Dated research snapshot. See docs/data-maintenance.md; no live price or stock feed. */
+/* Dated research snapshot. See docs/maintenance.md; no live price or stock feed. */
 var BagelData = {
   "version": "open-source-candidate-2026-10-17-v01",
   "checked": "2026-10-13",
@@ -7,7 +7,7 @@ var BagelData = {
       "id": "a1-mini",
       "name": "A1 mini",
       "series": "A",
-      "image": "./assets/a1-mini.svg",
+      "image": "./assets/a1-mini.png",
       "build": {
         "single": [
           180,
@@ -57,13 +57,13 @@ var BagelData = {
         365
       ],
       "motionNote": "官方指南 Y 方向图示 390 mm；不是整套摆放矩形。",
-      "imageCaption": "结构示意，非机型实拍"
+      "imageCaption": "拓竹官网产品图；尺寸与配置以资料为准"
     },
     {
       "id": "a1",
       "name": "A1",
       "series": "A",
-      "image": "./assets/a1.svg",
+      "image": "./assets/a1.png",
       "build": {
         "single": [
           256,
@@ -113,13 +113,13 @@ var BagelData = {
         430
       ],
       "motionNote": "官方指南 Y 方向图示 545 mm；不是整套摆放矩形。",
-      "imageCaption": "结构示意，非机型实拍"
+      "imageCaption": "拓竹官网产品图；尺寸与配置以资料为准"
     },
     {
       "id": "a2l",
       "name": "A2L",
       "series": "A",
-      "image": "./assets/a2l.svg",
+      "image": "./assets/a2l.png",
       "build": {
         "single": [
           330,
@@ -153,13 +153,13 @@ var BagelData = {
       "stock": "未核",
       "device": null,
       "motionNote": "机身、料架、运动和维护空间待核。",
-      "imageCaption": "结构示意，非机型实拍"
+      "imageCaption": "拓竹官网产品图；尺寸与配置以资料为准"
     },
     {
       "id": "p1s",
       "name": "P1S",
       "series": "P",
-      "image": "./assets/p1s.svg",
+      "image": "./assets/p1s.png",
       "build": {
         "single": [
           256,
@@ -208,13 +208,13 @@ var BagelData = {
       "stock": "未核",
       "device": null,
       "motionNote": "机身、料架、运动和维护空间待核。",
-      "imageCaption": "结构示意，非机型实拍"
+      "imageCaption": "拓竹官网产品图；尺寸与配置以资料为准"
     },
     {
       "id": "p2s",
       "name": "P2S",
       "series": "P",
-      "image": "./assets/p2s.svg",
+      "image": "./assets/p2s.png",
       "build": {
         "single": [
           256,
@@ -265,13 +265,13 @@ var BagelData = {
         478
       ],
       "motionNote": "本轮官网核外形尺寸；整套料架、开门、排料、线缆与维护空间另核。",
-      "imageCaption": "结构示意，非机型实拍"
+      "imageCaption": "拓竹官网产品图；尺寸与配置以资料为准"
     },
     {
       "id": "x2d",
       "name": "X2D",
       "series": "X",
-      "image": "./assets/x2d.svg",
+      "image": "./assets/x2d.png",
       "build": {
         "main": [
           256,
@@ -336,13 +336,13 @@ var BagelData = {
         478
       ],
       "motionNote": "本轮官网核外形尺寸；整套料架、开门、排料、线缆与维护空间另核。",
-      "imageCaption": "结构示意，非机型实拍"
+      "imageCaption": "拓竹官网产品图；尺寸与配置以资料为准"
     },
     {
       "id": "h2s",
       "name": "H2S",
       "series": "H",
-      "image": "./assets/h2s.svg",
+      "image": "./assets/h2s.png",
       "build": {
         "single": [
           340,
@@ -375,13 +375,13 @@ var BagelData = {
       "stock": "未核",
       "device": null,
       "motionNote": "机身、料架、运动和维护空间待核。",
-      "imageCaption": "结构示意，非机型实拍"
+      "imageCaption": "拓竹官网产品图；尺寸与配置以资料为准"
     },
     {
       "id": "h2d",
       "name": "H2D",
       "series": "H",
-      "image": "./assets/h2d.svg",
+      "image": "./assets/h2d.png",
       "build": {
         "single": [
           325,
@@ -436,13 +436,13 @@ var BagelData = {
       "stock": "未核",
       "device": null,
       "motionNote": "机身、料架、运动和维护空间待核。",
-      "imageCaption": "结构示意，非机型实拍"
+      "imageCaption": "拓竹官网产品图；尺寸与配置以资料为准"
     },
     {
       "id": "h2c",
       "name": "H2C",
       "series": "H",
-      "image": "./assets/h2c.svg",
+      "image": "./assets/h2c.png",
       "build": {
         "left": [
           325,
@@ -503,7 +503,7 @@ var BagelData = {
       "stock": "未核",
       "device": null,
       "motionNote": "机身、料架、运动和维护空间待核。",
-      "imageCaption": "结构示意，非机型实拍"
+      "imageCaption": "拓竹官网产品图；尺寸与配置以资料为准"
     }
   ],
   "historicalReference": {
@@ -1047,6 +1047,6 @@ var BagelData = {
       "valid_for_budget_gate": false
     }
   ],
-  "assetProfile": "public-schematic"
+  "assetProfile": "official-product-images"
 };
 if(typeof module!=="undefined"&&module.exports)module.exports=BagelData;

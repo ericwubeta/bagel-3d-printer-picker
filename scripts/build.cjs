@@ -11,7 +11,8 @@ const hash = buffer => crypto.createHash('sha256').update(buffer).digest('hex');
 function arg(name) { const i = process.argv.indexOf(name); return i < 0 ? null : process.argv[i + 1]; }
 const profile = arg('--mode') || (arg('--private-assets') ? 'brand' : 'public');
 if (!['public', 'brand'].includes(profile)) throw Error('Mode must be public or brand');
-const privateAssets = profile === 'brand' ? path.resolve(arg('--private-assets') || path.join(root, 'private-assets')) : null;
+const privateAssets = arg('--private-assets') ? path.resolve(arg('--private-assets')) : null;
+if (privateAssets && profile !== 'brand') throw Error('Local asset overrides require brand mode');
 const dist = path.resolve(root, 'dist', profile);
 // Only these two resolved build directories may be replaced. Refuse symlinks and junctions.
 if (![path.join(root, 'dist/public'), path.join(root, 'dist/brand')].includes(dist)) throw Error('Unsafe output path');
@@ -24,7 +25,7 @@ if (fs.existsSync(reports) && (fs.lstatSync(reports).isSymbolicLink() || fs.real
 // Validate all inputs before replacing previous build output.
 const inputs = runtime.map(file => [file, path.join(root, 'web', file)]).concat(brand.map(file => ['assets/' + file, path.join(root, 'web/assets', file)]));
 inputs.push(['licensing/runtime-attribution.json', path.join(root, 'licensing/runtime-attribution.json')]);
-machines.forEach(id => inputs.push(['assets/' + id + (privateAssets ? '.png' : '.svg'), privateAssets ? path.resolve(privateAssets, id + '.png') : path.join(root, 'web/assets', id + '.svg')]));
+machines.forEach(id => inputs.push(['assets/' + id + '.png', privateAssets ? path.resolve(privateAssets, id + '.png') : path.join(root, 'web/assets', id + '.png')]));
 for (const [file, source] of inputs) {
   if (!fs.existsSync(source) || !fs.statSync(source).isFile()) throw Error('Missing build input: ' + file);
   if (file.endsWith('.js')) new vm.Script(fs.readFileSync(source, 'utf8'), {filename: file});
@@ -40,13 +41,13 @@ const attribution = JSON.parse(fs.readFileSync(path.join(root, attributionFile),
 if (!Array.isArray(attribution.materials)) throw Error('Attribution materials must be an array');
 if (privateAssets) {
   for (const id of machines) {
-    const originals = attribution.materials.filter(item => (item.runtime_path || item.path) === 'assets/' + id + '.svg');
-    if (originals.length !== 1) throw Error('Missing or ambiguous schematic attribution: ' + id);
+    const originals = attribution.materials.filter(item => (item.runtime_path || item.path) === 'assets/' + id + '.png');
+    if (originals.length !== 1) throw Error('Missing or ambiguous product-image attribution: ' + id);
     Object.assign(originals[0], {
       path: 'assets/' + id + '.png', runtime_path: 'assets/' + id + '.png',
       source_path: 'private-assets/' + id + '.png',
       license: 'NO-PUBLIC-REDISTRIBUTION-GRANT',
-      creator: 'Vendor image; rights retained by the original rights holder',
+      creator: 'Local replacement supplied by maintainer; rights not independently verified',
       source: 'Local private vendor-image input; excluded from public source and public redistribution.',
       modifications: 'Copied for the local brand build; not relicensed under MIT or CC BY-NC-4.0.',
       third_party_exception: 'No public redistribution grant; excluded from MIT and CC BY-NC-4.0.'

@@ -1,0 +1,10 @@
+Third-party product images: Bambu Lab
+Identifier used by this project: LicenseRef-Bambu-Product-Images
+
+The nine product PNGs listed in licensing/product-images.json are existing crops of images previously obtained from Bambu Lab official product material. Copyright and other applicable rights remain with Bambu Lab or the original rights holder. They are not photographs taken by the project owner.
+
+The project owner requested including these files in the public repository to match the existing tool and video. That request is not evidence of a license from Bambu Lab. No official permission to redistribute, sublicense, commercially reuse, or relicense the images under MIT or CC BY-NC-4.0 is represented or granted by this repository.
+
+Keep the source and rights notices when retaining the images. For reuse beyond rights otherwise available to you, obtain appropriate permission or replace the images with your own material. Product names and images do not imply sponsorship or endorsement.
+
+Related official product pages and SHA-256 hashes are recorded per file. The exact original image-download URLs were not retained, so linked product/specification pages are not misrepresented as download URLs.

@@ -18,6 +18,9 @@ for(const material of map.files){
 }
 if(map.files.filter(m=>m.license==='CC-BY-NC-4.0').length!==11) errors.push('Expected 10 brand rasters plus one note data file');
 if(map.files.filter(m=>m.license==='MIT').length!==9) errors.push('Expected 9 generic SVGs');
+if(map.files.filter(m=>m.license==='LicenseRef-Bambu-Product-Images').length!==9)errors.push('Expected 9 separately attributed official product images');
+if(!meta.official_image_sync || !meta.official_image_sync.public_source_inclusion_requested)errors.push('Official image inclusion must follow the owner request');
+if(!notice.licenses['LicenseRef-Bambu-Product-Images'] || notice.licenses['LicenseRef-Bambu-Product-Images'].text!==fs.readFileSync(path.join(root,'LICENSES/Bambu-Product-Images.txt'),'utf8'))errors.push('Third-party product-image notice missing or stale');
 for(const name of fs.readdirSync(path.join(root,'web/assets'))){
   const source='web/assets/'+name;
   if(!map.files.some(m=>m.path===source))errors.push('Asset lacks per-file license coverage: '+source);
@@ -40,7 +43,7 @@ const tracked=child.spawnSync('git',['ls-files','-z'],{cwd:root,encoding:'utf8'}
 if(tracked.status===0){
   const staged=tracked.stdout.split('\0').filter(Boolean);
   if(staged.some(f=>f.startsWith('skills/')))errors.push('Skill belongs in the separate bagel-printer-advisor repository');
-  for(const f of staged)if(/^(?:private-assets|dist|output|node_modules|sources)\//.test(f)||/^web\/assets\/(?:a1-mini|a1|a2l|p1s|p2s|x2d|h2s|h2d|h2c|welcome-hello|welcome-invite)\.png$/.test(f))errors.push('Private/generated file staged: '+f);
+  for(const f of staged)if(/^(?:private-assets|dist|output|node_modules|sources)\//.test(f)||/^web\/assets\/(?:welcome-hello|welcome-invite)\.png$/.test(f))errors.push('Private/generated file staged: '+f);
   for(const f of ['LICENSE','LICENSING.md','LICENSES/CC-BY-NC-4.0.txt','content/notes.json','licensing/asset-map.json','licensing/runtime-attribution.json','licensing/publication.json','scripts/preflight.cjs','scripts/update-license-notices.cjs'])if(!staged.includes(f))errors.push('Required source absent from Git index: '+f);
   for(const args of [['diff','--name-only'],['ls-files','--others','--exclude-standard']]){
     const drift=child.spawnSync('git',args,{cwd:root,encoding:'utf8'});

@@ -2,7 +2,7 @@
 
 五个问题，看看哪款更适合你。一个无需联网的拓竹选机小工具。选机 Agent Skill 已迁到独立仓库。
 
-当前为 **2026-10-19 小工具 1.0.1（源码版本 1.0.1）**，仓库为 [ericwubeta/bagel-3d-printer-picker](https://github.com/ericwubeta/bagel-3d-printer-picker)。本次仅发布源码，不部署网站或发布新版小红书小工具。代码与通用结构图采用 MIT；项目自有笔记和贝果美术素材采用 CC BY-NC 4.0，允许非商业分享与改编。署名使用已验证的 GitHub 维护者账号 `ericwubeta`，小红书主页链接尚未提供。具体范围及第三方例外见 [LICENSING.md](LICENSING.md)。
+当前为 **2026-10-19 小工具 1.0.1（源码版本 1.0.1）**，仓库为 [ericwubeta/bagel-3d-printer-picker](https://github.com/ericwubeta/bagel-3d-printer-picker)。本次仅发布源码，不部署网站或发布新版小红书小工具。代码与保留的通用结构图采用 MIT；项目自有笔记和贝果美术素材采用 CC BY-NC 4.0，允许非商业分享与改编。署名使用已验证的 GitHub 维护者账号 `ericwubeta`，小红书主页链接尚未提供。具体范围及第三方例外见 [LICENSING.md](LICENSING.md)。
 
 ## 可以做什么
 
@@ -33,15 +33,17 @@ python scripts/package.py --mode public
 
 上传包输出到 `output/bagel-printer-picker-public-v1.0.1.zip`，ZIP根目录直接是`index.html`，包内`licensing/runtime-attribution.json`携带许可正文及来源。源码仓库或源码ZIP不能当作小红书运行包上传。验证和逐文件哈希位于被忽略的`output/`。
 
-**公开版的机器图为原创结构示意**，不代表各型号真实外观或比例。为避免将未取得再分发许可的官网照片带进公开仓库，本地品牌构建可从被忽略的 `private-assets/` 加载原照片。它不是公开源码的一部分；不放原照片也可完整构建公开版。不要把品牌上传包当作 GitHub Release 附件公开分发。
+默认构建现在使用 **此前小工具及视频使用的9张拓竹官网产品图**，无需私人目录即可得到相同机型图片。它们不是作者实拍，也不受本项目MIT或CC BY-NC 4.0许可覆盖；版权保留于原权利人，未宣称已取得厂商的公开再分发许可。逐文件哈希及来源记录见 [licensing/product-images.json](licensing/product-images.json) 和 [第三方产品图说明](LICENSES/Bambu-Product-Images.txt)。
 
-本地维护者已有素材时，可另运行下列命令；克隆公开仓库的用户应使用上面的 `public` 模式：
+`public` 与 `brand` 默认使用同一套已入库产品图；`brand` 保留为原本地打包入口。只有显式传入 `--private-assets <目录>` 时，才读取本地替换图片，私人目录仍不提交。原9张MIT结构SVG保留为源码参考，不作为默认显示或运行包资源。
 
 ```sh
 node scripts/build.cjs --mode brand
 node scripts/validate.cjs --mode brand
 python scripts/package.py --mode brand
 ```
+
+本次同步同时更新了结果卡片、全系能力图和机型详情的数据引用，以及默认构建、素材声明和校验规则。题面、推荐逻辑、价格记录、贝果动作、笔记正文与猫叫未改变。对照结果见 [图片同步检查](docs/asset-sync-2026-10-19.md)。
 
 ## 独立的选机 Skill
 
@@ -76,7 +78,7 @@ python scripts/package.py --mode brand
 | `licensing/`、`LICENSES/` | 逐路径许可、来源署名与法律文本 |
 | `docs/` | 维护方法、来源和边界 |
 
-小工具代码为 [MIT](LICENSE)，笔记及项目自有贝果图片为 [CC BY-NC 4.0](ASSET-LICENSE.md)。两者按路径适用，MIT不覆盖NC内容，不是任选一种许可。猫叫E保留tuberatanka的CC0，详见 [第三方说明](THIRD_PARTY_NOTICES.md)。贝果照片原图、朋友参考图、研究访谈、私有路径、原始抓取网页和视频均未纳入公开源码候选。目前未纳入独立Logo文件；今后加入时须逐项登记来源。
+小工具代码为 [MIT](LICENSE)，笔记及项目自有贝果图片为 [CC BY-NC 4.0](ASSET-LICENSE.md)。两者按路径适用，MIT不覆盖NC内容，不是任选一种许可。9张官网产品图单列第三方权利说明；猫叫E保留tuberatanka的CC0，详见 [第三方说明](THIRD_PARTY_NOTICES.md)。贝果照片原图、朋友参考图、研究访谈、私有路径、原始抓取网页和视频均未纳入公开源码候选。目前未纳入独立Logo文件；今后加入时须逐项登记来源。
 
 ## 推送前检查
 
