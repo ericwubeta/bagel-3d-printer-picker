@@ -1,5 +1,0 @@
-interface:
-  display_name: "贝果陪你选3D打印机"
-  short_description: "先看空间和预算，再比较尺寸、用途与颜色，解释一到两款候选及买前待核条件"
-  brand_color: "#2451C7"
-  default_prompt: "使用 $bagel-printer-advisor，根据我的摆放空间和总预算，逐轮帮我比较适合的3D打印机。"

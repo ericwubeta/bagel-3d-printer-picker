@@ -1,8 +1,8 @@
 # 贝果陪你选 · 3D打印机
 
-五个问题，看看哪款更适合你。一个无需联网的拓竹选机小工具，以及可独立使用的选机 Agent skill。
+五个问题，看看哪款更适合你。一个无需联网的拓竹选机小工具。选机 Agent Skill 已迁到独立仓库。
 
-当前为 **2026-10-17 公开源码版 0.1.2**，仓库为 [ericwubeta/bagel-3d-printer-picker](https://github.com/ericwubeta/bagel-3d-printer-picker)。本次仅发布源码，不部署网站或发布新版小红书小工具。代码与通用结构图采用 MIT；项目自有笔记和贝果美术素材采用 CC BY-NC 4.0，允许非商业分享与改编。署名使用已验证的 GitHub 维护者账号 `ericwubeta`，小红书主页链接尚未提供。具体范围及第三方例外见 [LICENSING.md](LICENSING.md)。
+当前为 **2026-10-19 小工具 1.0（源码版本 1.0.0）**，仓库为 [ericwubeta/bagel-3d-printer-picker](https://github.com/ericwubeta/bagel-3d-printer-picker)。本次仅发布源码，不部署网站或发布新版小红书小工具。代码与通用结构图采用 MIT；项目自有笔记和贝果美术素材采用 CC BY-NC 4.0，允许非商业分享与改编。署名使用已验证的 GitHub 维护者账号 `ericwubeta`，小红书主页链接尚未提供。具体范围及第三方例外见 [LICENSING.md](LICENSING.md)。
 
 ## 可以做什么
 
@@ -31,7 +31,7 @@ node scripts/serve.cjs --mode public --port 5200
 python scripts/package.py --mode public
 ```
 
-上传包输出到 `output/bagel-printer-picker-public-v0.1.2.zip`，ZIP根目录直接是`index.html`，包内`licensing/runtime-attribution.json`携带许可正文及来源。源码仓库或源码ZIP不能当作小红书运行包上传。验证和逐文件哈希位于被忽略的`output/`。
+上传包输出到 `output/bagel-printer-picker-public-v1.0.0.zip`，ZIP根目录直接是`index.html`，包内`licensing/runtime-attribution.json`携带许可正文及来源。源码仓库或源码ZIP不能当作小红书运行包上传。验证和逐文件哈希位于被忽略的`output/`。
 
 **公开版的机器图为原创结构示意**，不代表各型号真实外观或比例。为避免将未取得再分发许可的官网照片带进公开仓库，本地品牌构建可从被忽略的 `private-assets/` 加载原照片。它不是公开源码的一部分；不放原照片也可完整构建公开版。不要把品牌上传包当作 GitHub Release 附件公开分发。
 
@@ -43,15 +43,11 @@ node scripts/validate.cjs --mode brand
 python scripts/package.py --mode brand
 ```
 
-## 选机 skill
+## 独立的选机 Skill
 
-[skills/bagel-printer-advisor/SKILL.md](skills/bagel-printer-advisor/SKILL.md) 提炼选择方法，不把预算档和型号写成永久榜单。适合逐轮问询、已有需求比较、单机/AMS配置取舍。需要当前价格、机型或兼容信息时，skill 要求重新查一手资料。
+选机方法已迁到 [ericwubeta/bagel-printer-advisor](https://github.com/ericwubeta/bagel-printer-advisor)。Skill的安装、使用和维护以该仓库为准；本仓库不再附带 `skills/` 目录，构建也不依赖它。原0.1.2合并版本仍可在Git历史中追溯。
 
-将整个 `skills/bagel-printer-advisor/` 文件夹放到 Codex 的用户 skills 目录（通常是 `~/.codex/skills/`）。开始新会话后可直接用：
-
-> 使用 $bagel-printer-advisor，我想买第一台3D打印机，请一次问我一个问题。
-
-其他支持 Agent Skills 的工具可按各自规则加载该目录。不依赖原工作区、私人访谈或视频工程。
+本次拆分保持小工具五轮题面、推荐规则、画面、笔记内容、角色动作与猫叫不变。产品版本按1.0标识；源码包和运行包的完整版本为1.0.0。近期价格仍是10月16日的用户反馈，没有冒充10月19日重新核价。
 
 ## 价格与产品事实
 
@@ -65,7 +61,7 @@ python scripts/package.py --mode brand
 
 ## 平台与测试边界
 
-产物使用外置经典JS、本地相对资源和ES2017写法，按 [小红书容器官方文档](https://miniapp-sandbox.xiaohongshu.com/minitool/doc) 的Chrome61基线检查（本轮读取2026-10-17，页面标注更新2026-10-13）。不调用未公布的跳转或剪贴板能力；笔记入口为本地摘记和账号内查找引导。
+产物使用外置经典JS、本地相对资源和ES2017写法，按 [小红书容器官方文档](https://miniapp-sandbox.xiaohongshu.com/minitool/doc) 的Chrome61基线检查（本轮读取2026-10-19，页面标注更新2026-10-13）。不调用未公布的跳转或剪贴板能力；笔记入口为本地摘记和账号内查找引导。
 
 软件测试、静态扫描与现代浏览器走查不等于小红书平台验收：创服模拟器、Android真机、iOS真机均**待验证**；Chrome61旧内核、真机声音和性能未实测。本项目没有把模拟角色对话写成真人测试。
 
@@ -76,12 +72,11 @@ python scripts/package.py --mode brand
 | `web/` | 实际运行的HTML、CSS、JS和必要素材 |
 | `scripts/` | 可独立运行的构建、校验、预览、ZIP脚本 |
 | `tests/` | 推荐逻辑与数据边界回归 |
-| `skills/` | 可单独使用的选机方法 |
 | `content/` | CC BY-NC 4.0的笔记数据 |
 | `licensing/`、`LICENSES/` | 逐路径许可、来源署名与法律文本 |
 | `docs/` | 维护方法、来源和边界 |
 
-代码与skill为 [MIT](LICENSE)，笔记及项目自有贝果图片为 [CC BY-NC 4.0](ASSET-LICENSE.md)。两者按路径适用，MIT不覆盖NC内容，不是任选一种许可。猫叫E保留tuberatanka的CC0，详见 [第三方说明](THIRD_PARTY_NOTICES.md)。贝果照片原图、朋友参考图、研究访谈、私有路径、原始抓取网页和视频均未纳入公开源码候选。目前未纳入独立Logo文件；今后加入时须逐项登记来源。
+小工具代码为 [MIT](LICENSE)，笔记及项目自有贝果图片为 [CC BY-NC 4.0](ASSET-LICENSE.md)。两者按路径适用，MIT不覆盖NC内容，不是任选一种许可。猫叫E保留tuberatanka的CC0，详见 [第三方说明](THIRD_PARTY_NOTICES.md)。贝果照片原图、朋友参考图、研究访谈、私有路径、原始抓取网页和视频均未纳入公开源码候选。目前未纳入独立Logo文件；今后加入时须逐项登记来源。
 
 ## 推送前检查
 

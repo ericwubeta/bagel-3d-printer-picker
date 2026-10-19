@@ -39,6 +39,7 @@ if(!meta.public_push_approved) pending.push('PUBLIC_PUSH: 实际公开推送尚�
 const tracked=child.spawnSync('git',['ls-files','-z'],{cwd:root,encoding:'utf8'});
 if(tracked.status===0){
   const staged=tracked.stdout.split('\0').filter(Boolean);
+  if(staged.some(f=>f.startsWith('skills/')))errors.push('Skill belongs in the separate bagel-printer-advisor repository');
   for(const f of staged)if(/^(?:private-assets|dist|output|node_modules|sources)\//.test(f)||/^web\/assets\/(?:a1-mini|a1|a2l|p1s|p2s|x2d|h2s|h2d|h2c|welcome-hello|welcome-invite)\.png$/.test(f))errors.push('Private/generated file staged: '+f);
   for(const f of ['LICENSE','LICENSING.md','LICENSES/CC-BY-NC-4.0.txt','content/notes.json','licensing/asset-map.json','licensing/runtime-attribution.json','licensing/publication.json','scripts/preflight.cjs','scripts/update-license-notices.cjs'])if(!staged.includes(f))errors.push('Required source absent from Git index: '+f);
   for(const args of [['diff','--name-only'],['ls-files','--others','--exclude-standard']]){

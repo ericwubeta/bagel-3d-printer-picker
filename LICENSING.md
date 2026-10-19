@@ -1,13 +1,13 @@
 # 代码与内容分别许可
 
-日期：2026-10-17，版本0.1.2。项目源代码与通用代码素材使用MIT；项目自有笔记、美术与品牌图片使用CC BY-NC 4.0。署名为GitHub维护者 `ericwubeta`，来源为 [项目仓库](https://github.com/ericwubeta/bagel-3d-printer-picker)。小红书主页链接未提供，不据历史资料代填。
+日期：2026-10-19，版本1.0.0。项目源代码与通用代码素材使用MIT；项目自有笔记、美术与品牌图片使用CC BY-NC 4.0。署名为GitHub维护者 `ericwubeta`，来源为 [项目仓库](https://github.com/ericwubeta/bagel-3d-printer-picker)。小红书主页链接未提供，不据历史资料代填。
 
 ## 逐路径范围
 
 | 路径或对象 | 许可 | 边界 |
 |---|---|---|
 | `web/*.js`、`web/*.css`、`web/index.html` | MIT | `meow-data.js`中的第三方PCM音频例外见下；构建生成的`note-content.js`不属此通配项 |
-| `scripts/**`、`tests/**`、`skills/**`、项目编写的维护文档 | MIT | 不授权其中提到的第三方商标、产品原文或外部链接目标 |
+| `scripts/**`、`tests/**`、项目编写的维护文档 | MIT | 不授权其中提到的第三方商标、产品原文或外部链接目标 |
 | `web/assets/a1-mini.svg`、`a1.svg`、`a2l.svg`、`p1s.svg`、`p2s.svg`、`x2d.svg`、`h2s.svg`、`h2d.svg`、`h2c.svg` | MIT | 本项目通用结构示意，不是厂商实拍或精确尺寸图 |
 | `content/notes.json`；构建生成的`note-content.js`中的对应笔记数据 | CC-BY-NC-4.0 | 标题、关键词、作者摘记、账号引导；不覆盖朋友原文或外部原笔记的第三方内容 |
 | `web/assets/bagel-extra-poses.png`、`bagel-poses-soft-v02.png`、`welcome-pose-0.png`至`welcome-pose-7.png` | CC-BY-NC-4.0 | 仅就项目有权许可的图像创作部分；来源和哈希逐项记录 |

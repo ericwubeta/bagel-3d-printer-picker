@@ -24,5 +24,15 @@
     "instruction": "推送到github",
     "scope": "Public source repository only; no platform deployment or private asset publication."
   },
-  "attribution_basis": "Verified authenticated GitHub account ericwubeta (user id 273024733); no inferred social profile URL."
+  "attribution_basis": "Verified authenticated GitHub account ericwubeta (user id 273024733); no inferred social profile URL.",
+  "updated_at": "2026-10-19",
+  "product_version": "1.0",
+  "source_version": "1.0.0",
+  "companion_skill_repository": "https://github.com/ericwubeta/bagel-printer-advisor",
+  "repository_scope": "Minitool only; the separately maintained skill is linked rather than bundled.",
+  "split_approval_evidence": {
+    "date": "2026-10-19",
+    "instruction": "把小工具和Skill单独设置仓库",
+    "scope": "Update the existing app repository and create/push a separate public skill repository; prepare local Xiaohongshu upload ZIP only."
+  }
 }

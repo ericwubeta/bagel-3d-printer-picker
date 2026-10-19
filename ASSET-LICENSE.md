@@ -1,6 +1,6 @@
 # 贝果笔记与美术素材：CC BY-NC 4.0
 
-版本0.1.2，日期2026-10-17。已列项目自有素材使用 **Creative Commons Attribution-NonCommercial 4.0 International（署名—非商业性使用4.0）**。请署名 `ericwubeta` 并链接 [项目仓库](https://github.com/ericwubeta/bagel-3d-printer-picker)；来源和路径见 `licensing/publication.json` 与素材清单。
+版本1.0.0，日期2026-10-19。已列项目自有素材使用 **Creative Commons Attribution-NonCommercial 4.0 International（署名—非商业性使用4.0）**。请署名 `ericwubeta` 并链接 [项目仓库](https://github.com/ericwubeta/bagel-3d-printer-picker)；来源和路径见 `licensing/publication.json` 与素材清单。
 
 ## 适用素材
 
