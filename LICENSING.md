@@ -1,6 +1,6 @@
 # 代码与内容分别许可
 
-日期：2026-10-19，版本1.0.0。项目源代码与通用代码素材使用MIT；项目自有笔记、美术与品牌图片使用CC BY-NC 4.0。署名为GitHub维护者 `ericwubeta`，来源为 [项目仓库](https://github.com/ericwubeta/bagel-3d-printer-picker)。小红书主页链接未提供，不据历史资料代填。
+日期：2026-10-19，版本1.0.1。项目源代码与通用代码素材使用MIT；项目自有笔记、美术与品牌图片使用CC BY-NC 4.0。署名为GitHub维护者 `ericwubeta`，来源为 [项目仓库](https://github.com/ericwubeta/bagel-3d-printer-picker)。小红书主页链接未提供，不据历史资料代填。
 
 ## 逐路径范围
 

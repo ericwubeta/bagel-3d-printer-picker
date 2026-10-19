@@ -1,6 +1,6 @@
 {
   "name": "bagel-3d-printer-picker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "description": "贝果陪你选：五轮轻量问答，比较拓竹3D打印机的本地离线工具",
   "license": "SEE LICENSE IN LICENSING.md",

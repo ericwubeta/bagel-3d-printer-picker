@@ -2,7 +2,7 @@
 
 五个问题，看看哪款更适合你。一个无需联网的拓竹选机小工具。选机 Agent Skill 已迁到独立仓库。
 
-当前为 **2026-10-19 小工具 1.0（源码版本 1.0.0）**，仓库为 [ericwubeta/bagel-3d-printer-picker](https://github.com/ericwubeta/bagel-3d-printer-picker)。本次仅发布源码，不部署网站或发布新版小红书小工具。代码与通用结构图采用 MIT；项目自有笔记和贝果美术素材采用 CC BY-NC 4.0，允许非商业分享与改编。署名使用已验证的 GitHub 维护者账号 `ericwubeta`，小红书主页链接尚未提供。具体范围及第三方例外见 [LICENSING.md](LICENSING.md)。
+当前为 **2026-10-19 小工具 1.0.1（源码版本 1.0.1）**，仓库为 [ericwubeta/bagel-3d-printer-picker](https://github.com/ericwubeta/bagel-3d-printer-picker)。本次仅发布源码，不部署网站或发布新版小红书小工具。代码与通用结构图采用 MIT；项目自有笔记和贝果美术素材采用 CC BY-NC 4.0，允许非商业分享与改编。署名使用已验证的 GitHub 维护者账号 `ericwubeta`，小红书主页链接尚未提供。具体范围及第三方例外见 [LICENSING.md](LICENSING.md)。
 
 ## 可以做什么
 
@@ -31,7 +31,7 @@ node scripts/serve.cjs --mode public --port 5200
 python scripts/package.py --mode public
 ```
 
-上传包输出到 `output/bagel-printer-picker-public-v1.0.0.zip`，ZIP根目录直接是`index.html`，包内`licensing/runtime-attribution.json`携带许可正文及来源。源码仓库或源码ZIP不能当作小红书运行包上传。验证和逐文件哈希位于被忽略的`output/`。
+上传包输出到 `output/bagel-printer-picker-public-v1.0.1.zip`，ZIP根目录直接是`index.html`，包内`licensing/runtime-attribution.json`携带许可正文及来源。源码仓库或源码ZIP不能当作小红书运行包上传。验证和逐文件哈希位于被忽略的`output/`。
 
 **公开版的机器图为原创结构示意**，不代表各型号真实外观或比例。为避免将未取得再分发许可的官网照片带进公开仓库，本地品牌构建可从被忽略的 `private-assets/` 加载原照片。它不是公开源码的一部分；不放原照片也可完整构建公开版。不要把品牌上传包当作 GitHub Release 附件公开分发。
 
@@ -47,7 +47,7 @@ python scripts/package.py --mode brand
 
 选机方法已迁到 [ericwubeta/bagel-printer-advisor](https://github.com/ericwubeta/bagel-printer-advisor)。Skill的安装、使用和维护以该仓库为准；本仓库不再附带 `skills/` 目录，构建也不依赖它。原0.1.2合并版本仍可在Git历史中追溯。
 
-本次拆分保持小工具五轮题面、推荐规则、画面、笔记内容、角色动作与猫叫不变。产品版本按1.0标识；源码包和运行包的完整版本为1.0.0。近期价格仍是10月16日的用户反馈，没有冒充10月19日重新核价。
+本次拆分保持小工具五轮题面、推荐规则、画面、笔记内容、角色动作与猫叫不变。产品版本按1.0.1标识；源码包和运行包的完整版本为1.0.1。近期价格仍是10月16日的用户反馈，没有冒充10月19日重新核价。
 
 ## 价格与产品事实
 
